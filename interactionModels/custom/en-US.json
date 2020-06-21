@@ -1,0 +1,69 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "emma demo",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "HistoricalWeatherIntent",
+          "slots": [
+            {
+              "name": "place",
+              "type": "AMAZON.City"
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "What was the temperature in {place} {date} ",
+            "What was the weather in {place} on {date} "
+          ]
+        },
+        {
+          "name": "CurrentWeatherIntent",
+          "slots": [
+            {
+              "name": "place",
+              "type": "AMAZON.City"
+            }
+          ],
+          "samples": [
+            "What is the temperature in {place}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "6"
+}
