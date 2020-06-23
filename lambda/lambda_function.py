@@ -100,8 +100,7 @@ class HistoricalWeatherIntentHandler(AbstractRequestHandler):
             
         
         params = {
-            'key': 'd243e61633dc48f094d204114200306',
-            'q': place,
+            'key': '',      # TODO: Your API key here
             'dt': date
         }
         api_result = requests.get('http://api.weatherapi.com/v1/history.json', params)
