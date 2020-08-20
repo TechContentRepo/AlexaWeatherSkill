@@ -3,9 +3,25 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:667786263813:function:e70df2c9-8fcd-4ab7-8076-418fbf961166:Release_0"
+          "uri": "arn:aws:lambda:us-east-1:667786263813:function:c751df1a-f557-4d2c-92ff-f5b663aa0cd8:Release_0"
         },
-        "interfaces": []
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:667786263813:function:c751df1a-f557-4d2c-92ff-f5b663aa0cd8:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:667786263813:function:c751df1a-f557-4d2c-92ff-f5b663aa0cd8:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:667786263813:function:c751df1a-f557-4d2c-92ff-f5b663aa0cd8:Release_0"
+            }
+          }
+        }
       }
     },
     "manifestVersion": "1.0",
@@ -22,7 +38,7 @@
             "help"
           ],
           "keywords": [],
-          "name": "emma-demo",
+          "name": "workshop-boilerplate",
           "summary": "Sample Short Description"
         }
       },

@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "wash u weather two",
+      "invocationName": "change me",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -31,62 +31,10 @@
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
-        },
-        {
-          "name": "HistoricalWeatherIntent",
-          "slots": [
-            {
-              "name": "place",
-              "type": "AMAZON.City"
-            },
-            {
-              "name": "date",
-              "type": "AMAZON.DATE"
-            }
-          ],
-          "samples": [
-            "What was the weather in {place} on {date} "
-          ]
-        },
-        {
-          "name": "CurrentWeatherIntent",
-          "slots": [
-            {
-              "name": "place",
-              "type": "AMAZON.City"
-            }
-          ],
-          "samples": [
-            "What is the weather in {place}"
-          ]
-        },
-        {
-          "name": "FutureWeatherIntent",
-          "slots": [
-            {
-              "name": "place",
-              "type": "AMAZON.City"
-            }
-          ],
-          "samples": [
-            "What will the weather be in {place} tomorrow"
-          ]
-        },
-        {
-          "name": "testintent",
-          "slots": [
-            {
-              "name": "city",
-              "type": "AMAZON.City"
-            }
-          ],
-          "samples": [
-            "ask test what {city}"
-          ]
         }
       ],
       "types": []
     }
   },
-  "version": "9"
+  "version": "1"
 }
