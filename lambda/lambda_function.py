@@ -22,7 +22,7 @@ from ask_sdk_model import Response
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-
+key = '' #API KEY
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
     def can_handle(self, handler_input):
@@ -71,7 +71,7 @@ class CurrentWeatherIntentHandler(AbstractRequestHandler):
            handler_input=handler_input, slot_name="place")
         
         params = {
-            'key': '',      # TODO: Your API key here
+            'key': key,
             'q': place,
         }
         api_result = requests.get('http://api.weatherapi.com/v1/current.json', params)
@@ -100,7 +100,8 @@ class HistoricalWeatherIntentHandler(AbstractRequestHandler):
             
         
         params = {
-            'key': '',      # TODO: Your API key here
+            'key': key,
+            'q': place,
             'dt': date
         }
         api_result = requests.get('http://api.weatherapi.com/v1/history.json', params)
@@ -109,6 +110,36 @@ class HistoricalWeatherIntentHandler(AbstractRequestHandler):
         return (
             handler_input.response_builder
                 .speak(speak_output)
+                .response
+        )
+
+
+class FutureWeatherIntentHandler(AbstractRequestHandler):
+    """Handler for Weather Intent."""
+    def can_handle(self, handler_input):
+        # type: (HandlerInput) -> bool
+        return ask_utils.is_intent_name("FutureWeatherIntent")(handler_input)
+
+    def handle(self, handler_input):
+        place = get_slot_value(
+            handler_input=handler_input, slot_name="place")
+        
+        date = get_slot_value(
+            handler_input=handler_input, slot_name="date")
+            
+            
+        
+        params = {
+            'key': key,
+            'q': place,
+            'days': 1, #the number of days to forecast
+        }
+        api_result = requests.get('http://api.weatherapi.com/v1/forecast.json', params)
+        api_response = api_result.json()
+        speak_output = "Conditions in {} tomorrow will be {}".format(api_response['location']['name'],api_response['forecast']['forecastday'][0]['day']['condition']['text'])
+        return (
+            handler_input.response_builder
+                .speak(speak_output) #to debug, do speak(json.dumps(api_response))
                 .response
         )
 
@@ -220,6 +251,7 @@ sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(HelloWorldIntentHandler())
 sb.add_request_handler(HistoricalWeatherIntentHandler())
 sb.add_request_handler(CurrentWeatherIntentHandler())
+sb.add_request_handler(FutureWeatherIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(SessionEndedRequestHandler())
