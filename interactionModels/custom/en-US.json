@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "emma demo",
+      "invocationName": "wash u weather two",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -45,7 +45,6 @@
             }
           ],
           "samples": [
-            "What was the temperature in {place} {date} ",
             "What was the weather in {place} on {date} "
           ]
         },
@@ -58,12 +57,36 @@
             }
           ],
           "samples": [
-            "What is the temperature in {place}"
+            "What is the weather in {place}"
+          ]
+        },
+        {
+          "name": "FutureWeatherIntent",
+          "slots": [
+            {
+              "name": "place",
+              "type": "AMAZON.City"
+            }
+          ],
+          "samples": [
+            "What will the weather be in {place} tomorrow"
+          ]
+        },
+        {
+          "name": "testintent",
+          "slots": [
+            {
+              "name": "city",
+              "type": "AMAZON.City"
+            }
+          ],
+          "samples": [
+            "ask test what {city}"
           ]
         }
       ],
       "types": []
     }
   },
-  "version": "6"
+  "version": "9"
 }
