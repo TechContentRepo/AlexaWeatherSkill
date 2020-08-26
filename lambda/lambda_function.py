@@ -22,6 +22,7 @@ from ask_sdk_model import Response
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
+key = "YOUR API KEY"
 
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
@@ -71,12 +72,12 @@ class CurrentWeatherIntentHandler(AbstractRequestHandler):
            handler_input=handler_input, slot_name="place")
         
         params = {
-            'key': '',      # TODO: Your API key here
+            'key': key,
             'q': place,
         }
         api_result = requests.get('http://api.weatherapi.com/v1/current.json', params)
         api_response = api_result.json()
-        speak_output = "current temperature in " + str(api_response['location']['name']) + " is " + str(api_response['current']['temp_f']) + " degrees Fahrenheit"
+        speak_output = "" #add your custom response here. API response example: api_response['location']['name']
         return (
             handler_input.response_builder
                 .speak(speak_output)
