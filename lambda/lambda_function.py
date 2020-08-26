@@ -32,7 +32,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Welcome, you can say Hello or Help. Which would you like to try?"
+        speak_output = "Welcome to the WashU weather app!"
 
         return (
             handler_input.response_builder
@@ -83,34 +83,6 @@ class CurrentWeatherIntentHandler(AbstractRequestHandler):
                 .response
         )
 
-
-class HistoricalWeatherIntentHandler(AbstractRequestHandler):
-    """Handler for Weather Intent."""
-    def can_handle(self, handler_input):
-        # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("HistoricalWeatherIntent")(handler_input)
-
-    def handle(self, handler_input):
-        place = get_slot_value(
-            handler_input=handler_input, slot_name="place")
-        
-        date = get_slot_value(
-            handler_input=handler_input, slot_name="date")
-            
-            
-        
-        params = {
-            'key': '',      # TODO: Your API key here
-            'dt': date
-        }
-        api_result = requests.get('http://api.weatherapi.com/v1/history.json', params)
-        api_response = api_result.json()
-        speak_output = "The high in "+ str(api_response['location']['name']) + " on " + str(date) + " was " + str(api_response['forecast']['forecastday'][0]['day']['maxtemp_f']) + " degrees Fahrenheit"
-        return (
-            handler_input.response_builder
-                .speak(speak_output)
-                .response
-        )
 
 
 class HelpIntentHandler(AbstractRequestHandler):
@@ -218,7 +190,6 @@ sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
 sb.add_request_handler(HelloWorldIntentHandler())
-sb.add_request_handler(HistoricalWeatherIntentHandler())
 sb.add_request_handler(CurrentWeatherIntentHandler())
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
