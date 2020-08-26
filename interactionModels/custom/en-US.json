@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "emma demo",
+      "invocationName": "change me",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -31,39 +31,10 @@
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
-        },
-        {
-          "name": "HistoricalWeatherIntent",
-          "slots": [
-            {
-              "name": "place",
-              "type": "AMAZON.City"
-            },
-            {
-              "name": "date",
-              "type": "AMAZON.DATE"
-            }
-          ],
-          "samples": [
-            "What was the temperature in {place} {date} ",
-            "What was the weather in {place} on {date} "
-          ]
-        },
-        {
-          "name": "CurrentWeatherIntent",
-          "slots": [
-            {
-              "name": "place",
-              "type": "AMAZON.City"
-            }
-          ],
-          "samples": [
-            "What is the temperature in {place}"
-          ]
         }
       ],
       "types": []
     }
   },
-  "version": "6"
+  "version": "1"
 }
