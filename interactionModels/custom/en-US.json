@@ -31,10 +31,50 @@
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
+        },
+        {
+          "name": "HistoricalWeatherIntent",
+          "slots": [
+            {
+              "name": "place",
+              "type": "AMAZON.City"
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "What was the weather in {place} on {date} "
+          ]
+        },
+        {
+          "name": "FutureWeatherIntent",
+          "slots": [
+            {
+              "name": "place",
+              "type": "AMAZON.City"
+            }
+          ],
+          "samples": [
+            "What will the weather be in {place} tomorrow"
+          ]
+        },
+        {
+          "name": "testintent",
+          "slots": [
+            {
+              "name": "city",
+              "type": "AMAZON.City"
+            }
+          ],
+          "samples": [
+            "ask test what {city}"
+          ]
         }
       ],
       "types": []
     }
   },
-  "version": "1"
+  "version": "9"
 }
