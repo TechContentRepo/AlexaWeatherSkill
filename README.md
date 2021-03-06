@@ -136,7 +136,17 @@ That's right, now we get to finally see our Alexa Skill in action!
 
 Voila! Congratulations on creating your first Alexa Skill!
 
+
+### Step 7: Add More Functionality ###
+Now that you've implemented Current Weather, you can implement Future Weather or Historical Weather functionalities. The base code is already there,
+and the intents are already created for you. Take a look at them, and use what you learned from current weather to enhance your Alexa skill. 
+Some notes:
+ - For simplicity, "tomorrow" is the only available date for FutureWeatherIntent.
+ - Because of API free tier limitations, you will only be able to get historical data from the last 7 days. 
+
+
 ### Tips ###
 - Make sure to click the "Build Model" button whenever you make changes to the Invocation/Interaction Model
 - Make sure to click the "Deploy" button whenever you make changes to the `lambda_function.py`
+- Use the WeatherAPI ![API Explorer](https://www.weatherapi.com/api-explorer.aspx) to help craft your responses
 
