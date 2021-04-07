@@ -1,7 +1,7 @@
 # Amazon Alexa Workshop
 
 ## Demo Instructions
-1. Create the skill on your Alexa account using this branch as the code you import
+1. Create the skill on your Alexa account https://github.com/TechContentRepo/WeatherDemo as the code you import
 2. Fill in the API key in the code with your own API key
 3. Open the skill and go to testing
 4. For current weather, type "Ask Weather Demo what is the weather in Chicago?"
