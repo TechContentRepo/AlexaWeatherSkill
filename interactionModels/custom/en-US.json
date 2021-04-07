@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "wash u weather two",
+      "invocationName": "weather demo",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
