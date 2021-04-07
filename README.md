@@ -1,5 +1,13 @@
 # Amazon Alexa Workshop
 
+## Demo Instructions
+1. Create the skill on your Alexa account using this branch as the code you import
+2. Fill in the API key in the code with your own API key
+3. Open the skill and go to testing
+4. For current weather, type "Ask Weather Demo what is the weather in Chicago?"
+5. For future weather, type "Ask Weather Demo what will the weather be in Houston tomorrow?"
+6. For historical weather, type "Ask weather demo what was the temperature in Denver on April 5 2021?" *Change that date to 2 days before the current date. Use the FULL current date, and make sure to capitalize the month.*
+
 ## What are we going to build?
 An Amazon Alexa skill that answers a user's weather questions:
 
