@@ -71,7 +71,7 @@ There is a lot here and it's understandable that it'll be confusing, but we'll w
 ### Step 3: Invocation ###
 The "Invocation" is what someone needs to say in order to interact with an Alexa Skill. 
 1) On the left, click on the "Invocation" tab
-2) For our skill we are going to use `wash u weather` for the Invocation 
+2) For our skill we are going to use `weather app` for the Invocation 
 3) Click the "Save Model" button at the top:
 
 ![Save Model](https://github.com/TechContentRepo/AlexaWeatherSkill/blob/master/photos/Save%20Model.png?raw=true)
@@ -125,7 +125,7 @@ speak_output = "The current temperature in " + str(api_response['location']['nam
 That's right, now we get to finally see our Alexa Skill in action!
 1) Navigate to the "Test" tab on the top of the developer console
 2) Enable testing by clicking the dropdown and selecting "Development"
-3) Type into the input: `Open wash u weather` - this opens our app using its *Invocation*
+3) Type into the input: `Open weather app` - this opens our app using its *Invocation*
 
 ![Open App](https://github.com/TechContentRepo/AlexaWeatherSkill/blob/master/photos/Open%20App.png?raw=true)
 
@@ -136,7 +136,17 @@ That's right, now we get to finally see our Alexa Skill in action!
 
 Voila! Congratulations on creating your first Alexa Skill!
 
+
+### Step 7: Add More Functionality ###
+Now that you've implemented Current Weather, you can implement Future Weather or Historical Weather functionalities. The base code is already there,
+and the intents are already created for you. Take a look at them, and use what you learned from current weather to enhance your Alexa skill. 
+Some notes:
+ - For simplicity, "tomorrow" is the only available date for FutureWeatherIntent.
+ - Because of API free tier limitations, you will only be able to get historical data from the last 7 days. 
+
+
 ### Tips ###
 - Make sure to click the "Build Model" button whenever you make changes to the Invocation/Interaction Model
 - Make sure to click the "Deploy" button whenever you make changes to the `lambda_function.py`
+- Use the WeatherAPI ![API Explorer](https://www.weatherapi.com/api-explorer.aspx) to help craft your responses
 
