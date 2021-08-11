@@ -131,7 +131,7 @@ class FutureWeatherIntentHandler(AbstractRequestHandler):
             
         
         params = {
-            'key': key
+            'key': key,
             'q': place,
             'days': 1, #the number of days to forecast
         }
