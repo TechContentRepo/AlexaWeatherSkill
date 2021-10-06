@@ -148,5 +148,4 @@ Some notes:
 ### Tips ###
 - Make sure to click the "Build Model" button whenever you make changes to the Invocation/Interaction Model
 - Make sure to click the "Deploy" button whenever you make changes to the `lambda_function.py`
-- Use the WeatherAPI ![API Explorer](https://www.weatherapi.com/api-explorer.aspx) to help craft your responses
-
+- Use the ![WeatherAPI](https://www.weatherapi.com/docs/) to help craft your responses (API Explorer tab is helpful too for easily testing requests)
