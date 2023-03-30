@@ -8,7 +8,7 @@ An Amazon Alexa skill that answers a user's weather questions:
 What technologies will we be using?
 - [Alexa Developer Console](https://developer.amazon.com/alexa/console/ask)
 - Python
-- [Weather API](https://weatherapi.com)
+- [Weather API](https://www.weatherapi.com/)
 
 
 ### Step 1: Account Setup
