@@ -71,7 +71,7 @@ There is a lot here and it's understandable that it'll be confusing, but we'll w
 ### Step 3: Invocation ###
 The "Invocation" is what someone needs to say in order to interact with an Alexa Skill. 
 1) On the left, click on the "Invocation" tab
-2) For our skill we are going to use `weather app` for the Invocation 
+2) For our skill we are going to use `weather service` for the Invocation 
 3) Click the "Save Model" button at the top:
 
 ![Save Model](https://github.com/TechContentRepo/AlexaWeatherSkill/blob/master/photos/Save%20Model.png?raw=true)
@@ -125,7 +125,7 @@ speak_output = "The current temperature in " + str(api_response['location']['nam
 That's right, now we get to finally see our Alexa Skill in action!
 1) Navigate to the "Test" tab on the top of the developer console
 2) Enable testing by clicking the dropdown and selecting "Development"
-3) Type into the input: `Open weather app` - this opens our app using its *Invocation*
+3) Type into the input: `Open weather service` - this opens our app using its *Invocation*
 
 ![Open App](https://github.com/TechContentRepo/AlexaWeatherSkill/blob/master/photos/Open%20App.png?raw=true)
 
