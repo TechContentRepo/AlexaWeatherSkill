@@ -78,7 +78,7 @@ The "Invocation" is what someone needs to say in order to interact with an Alexa
 
 ![Invocation Name](./photos/Invocation%20Name.png)
 
-3. Click the "Build skill" button at the top:
+3. Click the "Save" button at the top:
 
 ![Save Model](./photos/Save%20Model.png)
 
