@@ -19,14 +19,10 @@ Even if you already have an amazon/aws account you will need to follow these ste
 2. Click "Create your Amazon account".
 3. Fill out the required information and click on the "Create your Amazon account" button (you may need to solve a small puzzle after that).
 
-![Create Alexa Account](./photos/Create%20Alexa%20Accoun.png)
+![Create Alexa Account](./photos/Create%20Alexa%20Account.png)
 
-4. Verify your email address with the One Time Password (OTP) sent to said email:
-
-![Verify Email](./photos/Verify%20Email.png)
-
+4. Verify your email address with the One Time Password (OTP) sent to said email.
 5. Add and verify your mobile phone number (REQUIRED).
-
 6. Click the "Alexa Skills Kit" if the signup asks for your interests:
 
 ![Alexa Skill Kit](https://github.com/TechContentRepo/AlexaWeatherSkill/blob/master/photos/Alexa%20Skill%20Kit.png?raw=true)
